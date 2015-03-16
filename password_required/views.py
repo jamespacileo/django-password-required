@@ -49,7 +49,7 @@ def login(request, template_name='password_required_login.html',
         'site': current_site,
         'site_name': current_site.name,
     }, context_instance=RequestContext(request))
-    response["P3P"] = 'CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT"'
+#     response["P3P"] = 'CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT"'
     return response
 
 def _clean_redirect(redirect_to):
