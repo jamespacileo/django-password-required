@@ -7,9 +7,10 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.views.decorators.cache import never_cache
 from django.views.decorators.csrf import csrf_protect
+from django.views.decorators.csrf import csrf_exempt
 from password_required.forms import AuthenticationForm
 
-@csrf_protect
+@csrf_exempt
 @never_cache
 def login(request, template_name='password_required_login.html',
           redirect_field_name=REDIRECT_FIELD_NAME,
